@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="cross" (click)="removeFromList();" title="remove from dashboard">
+    <div class="cross1"></div>
+    <div class="cross2"></div>
+  </div>
+    <div>
+        <h2>{{symbol}}</h2>
+        USD: {{close}}  <span [ngClass]="(diff > 0)? 'change-g': 'change-r'" > {{(diff > 0)? "+": ""}}{{diff}}  ( {{perc_diff}}% )</span>
+        <hr>
+        <table>
+          <tr>
+            <td>open</td><td>{{open}}</td>
+          </tr>
+          <tr>
+              <td>high</td><td>{{high}}</td>
+          </tr>
+          <tr>
+            <td>low</td><td>{{low}}</td>
+          </tr>
+          <tr>
+            <td>close</td><td>{{close}}</td>
+          </tr>
+          <tr>
+            <td>volume</td><td>{{volume}}</td>
+          </tr>
+        </table>
+        <div id="script"></div>
+    </div>
+</div>
+
+

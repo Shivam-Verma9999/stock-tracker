@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="hero" style="text-align:center">
+  <h1 style="font-size : 50px;">
+    Welcome to {{ title }}!
+  </h1>
+  <br/>
+  <span style="color: darkgray;">Real time stock Info.<br/>
+  Just add the stock you want to track on the DashBoard.<br/>
+  Stock info will be autamatically updated after Every 5 minutes.<br/>
+  </span>
+</div>
+
+  <form (ngSubmit)='submitForm()' [formGroup]='form'>
+    <input type="text" formControlName='search'placeholder="Enter stock symbol" required>
+    <input type="submit" value="Add Stock to DashBoard">
+  </form>
+
+<div class="main-container">
+  <div class="list">
+    <h1>DashBoard</h1>
+    <br/>
+    <p *ngFor="let stockName of relevantStock"><b>{{stockName}}</b></p>
+  </div>
+
+  <div class="card-container">
+    <app-card *ngFor="let stockName of relevantStock" (removeEvent)="removeStock($event)" [stockName]="stockName" >
+
+    </app-card>
+  </div>
+      
+</div>
+
+<router-outlet></router-outlet>

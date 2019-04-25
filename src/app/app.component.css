@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+.hero{
+  margin-bottom: 10px;
+}
+.card-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.card{
+  width: 200px;
+}
+.list{
+  border-right: solid 1px rgb(0, 152, 253);
+  min-width: 220px;
+  position: sticky;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+.list p {
+  transition-duration: 0.4s;
+  margin: 5px auto;
+  border-radius: 5px;
+  padding: 6px;
+  background: transparent;
+  width: 80%;
+  box-shadow: gray 1px 1px 5px ;
+  color: balck;
+}
+.list p:hover{
+  
+  color: white;
+  background: #ad10ffcc;
+}
+.main-container{
+  display: flex;
+}
+input{
+  height: 30px;
+  margin-left: 10px;
+}
