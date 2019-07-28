@@ -40,7 +40,7 @@ export class CardComponent implements OnInit {
     });
   }
 
-  removeFromList(){
+  removeFromList() {
     this.removeEvent.emit(this.stockName);
   }
 
@@ -49,9 +49,9 @@ export class CardComponent implements OnInit {
 
     // as this api limits 5 requests per minute for non-prime users
     // so it sometimes returns error message or note regarding request limit exceeded.
-    if (this.data["Error Message"] || this.data["Note"]) {
-      console.log(this.data["Error Message"] || this.data["Note"]);
-      
+    if (this.data['Error Message'] || this.data['Note']) {
+      console.log(this.data['Error Message'] || this.data['Note']);
+
       // if card is shown for first time and some error accured then,
       // the card will remain empty so this removes that card
       // as when it loads for first time then all variables will be undefined.

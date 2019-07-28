@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
     console.log('submitting...');
     const s = this.form.controls.search.value;
     if (s.trim().length === 0) {
-      alert("please enter valid stock symbol");
+      alert('please enter valid stock symbol');
       return;
     }
     if (this.relevantStock.indexOf(s) !== -1) {
@@ -47,9 +47,9 @@ export class AppComponent implements OnInit {
     this.relevantStock.push(s);
   }
 
-  // removes the stock from the list on dashboard 
-  //and due to databinding its card view also gets removed.
+  // removes the stock from the list on dashboard
+  // and due to databinding its card view also gets removed.
   removeStock(stockName: string) {
-    this.relevantStock = this.relevantStock.filter((stock) => { return stockName !== stock });
+    this.relevantStock = this.relevantStock.filter((stock) => stockName !== stock);
   }
 }
