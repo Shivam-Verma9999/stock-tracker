@@ -44,7 +44,7 @@ export class CardComponent implements OnInit {
     this.removeEvent.emit(this.stockName);
   }
 
-  // test comment
+  // test comment -> new update
   // extract and parse the stock info data retrieved from Stock service
   parseData() {
 
